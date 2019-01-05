@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to what-should-i-have!');
+  it('should display home page', () => {
+    page.navigateTo('/');
+    expect(page.getTextOfElementText('app-root app-dish p')).toEqual(' home works!');
   });
 });
